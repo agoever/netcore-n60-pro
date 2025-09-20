@@ -19,6 +19,38 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
+
+
+# ddnsto 3.0.2
+git clone https://github.com/linkease/nas-packages-luci package/nas-packages-luci
+git clone https://github.com/linkease/nas-packages package/nas-packages
+git clone https://github.com/souwei168/luci-app-store.git package/luci-app-store
+
+#onliner
+git clone https://github.com/kiddin9/kwrt-packages kiddin9_package
+cp -rf kiddin9_package/luci-app-onliner package/luci-app-onliner
+# cp -rf kiddin9_package/luci-app-store package/luci-app-store
+cp -rf kiddin9_package/luci-app-wizard package/luci-app-wizard
+cp -rf kiddin9_package/luci-lib-taskd package/luci-lib-taskd
+cp -rf kiddin9_package/taskd package/taskd
+cp -rf kiddin9_package/luci-lib-xterm package/luci-lib-xterm
+
+# cp -rf kiddin9_package/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
+# cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
+
+# cp -rf kiddin9_package/luci-app-easymesh package/luci-app-easymesh
+# cp -rf kiddin9_package/luci-app-fileassistant package/luci-app-fileassistant
+cp -rf kiddin9_package/luci-app-timecontrol package/luci-app-timecontrol
+
+rm -rf kiddin9_package
+
+git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
+
+#lucky
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+
+
+
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
 config rule
