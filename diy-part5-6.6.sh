@@ -49,6 +49,10 @@ git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-
 #lucky
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 
+#pushbot
+
+git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pushbot
+
 
 
 # 添加组播防火墙规则
