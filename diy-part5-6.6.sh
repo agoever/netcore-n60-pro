@@ -35,8 +35,8 @@ cp -rf kiddin9_package/luci-lib-taskd package/luci-lib-taskd
 cp -rf kiddin9_package/taskd package/taskd
 cp -rf kiddin9_package/luci-lib-xterm package/luci-lib-xterm
 
-# cp -rf kiddin9_package/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
-# cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
+cp -rf kiddin9_package/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
+cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
 
 # cp -rf kiddin9_package/luci-app-easymesh package/luci-app-easymesh
 # cp -rf kiddin9_package/luci-app-fileassistant package/luci-app-fileassistant
