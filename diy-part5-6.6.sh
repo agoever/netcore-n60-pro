@@ -10,6 +10,9 @@
 # See /LICENSE for more information.
 #
 
+
+sed -i 's/qihoo,360t7/netcore,n60-pro/g' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+
 # Modify default IP
 sed -i 's/192.168.6.1/192.168.6.6/g' package/base-files/files/bin/config_generate
 
