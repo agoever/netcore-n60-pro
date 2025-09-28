@@ -53,10 +53,11 @@ git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 
 #pushbot
-
 git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pushbot
 
-
+#luci-app-bandix
+git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
+git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
