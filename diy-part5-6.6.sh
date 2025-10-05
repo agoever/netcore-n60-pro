@@ -44,7 +44,8 @@ cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
 # cp -rf kiddin9_package/luci-app-easymesh package/luci-app-easymesh
 # cp -rf kiddin9_package/luci-app-fileassistant package/luci-app-fileassistant
 cp -rf kiddin9_package/luci-app-timecontrol package/luci-app-timecontrol
-cp -rf kiddin9_packageluci-app-homeassistant package/luci-app-homeassistant
+cp -rf kiddin9_package/luci-app-homeassistant package/luci-app-homeassistant
+cp -rf kiddin9_package/luci-app-tailscale package/luci-app-tailscale
 
 
 rm -rf kiddin9_package
