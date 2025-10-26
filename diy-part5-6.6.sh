@@ -69,6 +69,8 @@ sed -i 's/Network Shares/Ksmbd共享/g' applications/luci-app-ksmbd/root/usr/sha
 sed -i 's/services/nas/g' applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json
 
 sed -i 's/services/network/g' applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
+sed -i 's/"title": "banIP"/"title": "BanIP"/g' applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
+
 
 
 # 添加组播防火墙规则
