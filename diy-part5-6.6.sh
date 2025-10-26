@@ -62,6 +62,15 @@ git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pus
 git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
+
+#修改显示位置
+sed -i 's/services/nas/g' applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
+sed -i 's/Network Shares/Ksmbd共享/g' applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
+sed -i 's/services/nas/g' applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json
+
+sed -i 's/services/network/g' applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
+
+
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
 config rule
