@@ -64,12 +64,12 @@ git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
 
 #修改显示位置
-sed -i 's/services/nas/g' applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
-sed -i 's/Network Shares/Ksmbd共享/g' applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
-sed -i 's/services/nas/g' applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
+sed -i 's/Network Shares/Ksmbd共享/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json
 
-sed -i 's/services/network/g' applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
-sed -i 's/"title": "banIP"/"title": "BanIP"/g' applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
+sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
+sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 
 
 
