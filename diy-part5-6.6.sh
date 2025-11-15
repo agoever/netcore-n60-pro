@@ -71,7 +71,7 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-transmission/root/usr
 sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 
-sed -i 's/services/nas/g' package/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
+sed -i 's/services/vpn/g' package/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
 
 
 # 添加组播防火墙规则
