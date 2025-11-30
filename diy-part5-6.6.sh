@@ -64,6 +64,8 @@ git clone https://github.com/gaoyaxuan/luci-app-pushbot.git package/luci-app-pus
 git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
+git clone https://github.com/animegasan/luci-app-quickstart.git package/luci-app-quickstart
+
 
 #修改显示位置
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
