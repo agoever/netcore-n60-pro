@@ -47,8 +47,8 @@ cp -rf kiddin9_package/luci-app-timecontrol package/luci-app-timecontrol
 cp -rf kiddin9_package/luci-app-homeassistant package/luci-app-homeassistant
 cp -rf kiddin9_package/luci-app-tailscale-community package/luci-app-tailscale-community
 #cp -rf kiddin9_package/luci-app-ssr-plus package/luci-app-ssr-plus
-#cp -rf kiddin9_package/luci-app-guest-wifi package/luci-app-guest-wifi
-
+#cp -rf kiddin9_package/luci-app-guest-wifi package/luci-app-guest-wifi :error
+cp -rf kiddin9_package/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
 rm -rf kiddin9_package
 
