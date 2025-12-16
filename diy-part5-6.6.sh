@@ -52,6 +52,12 @@ cp -rf kiddin9_package/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
 rm -rf kiddin9_package
 
+
+git clone https://github.com/kenzok8/small-package.git kenzok8_package
+cp -rf kenzok8_package/luci-app-quickstart package/luci-app-quickstart
+cp -rf kenzok8_package/quickstart package/quickstart
+rm -rf kenzok8_package
+
 git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
 
 #lucky
