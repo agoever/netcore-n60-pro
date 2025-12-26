@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6/tree/ee09cf9faf7d149e3d1be11453ac88d3c6e891c7
-  REPO_BRANCH: ee09cf9 #openwrt-24.10-6.6
+  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6.git
+  REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: padavanonly-237-defconfig-n60pro.config
   DIY_P1_SH: diy-part1.sh
