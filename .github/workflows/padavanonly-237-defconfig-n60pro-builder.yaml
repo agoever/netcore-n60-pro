@@ -36,6 +36,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
+      with:
+        ref: 'ee09cf9faf7d149e3d1be11453ac88d3c6e891c7' #目标commit ID,完整或简写均可
 
     - name: Initialization environment
       env:
