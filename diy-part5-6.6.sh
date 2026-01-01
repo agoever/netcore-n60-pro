@@ -50,6 +50,8 @@ cp -rf kiddin9_package/luci-app-tailscale-community package/luci-app-tailscale-c
 #cp -rf kiddin9_package/luci-app-guest-wifi package/luci-app-guest-wifi :error
 cp -rf kiddin9_package/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
+cp -rf kiddin9_package/luci-app-easytier package/luci-app-easytier
+
 rm -rf kiddin9_package
 
 
