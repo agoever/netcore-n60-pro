@@ -44,7 +44,7 @@ cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
 # cp -rf kiddin9_package/luci-app-easymesh package/luci-app-easymesh
 # cp -rf kiddin9_package/luci-app-fileassistant package/luci-app-fileassistant
 cp -rf kiddin9_package/luci-app-timecontrol package/luci-app-timecontrol
-cp -rf kiddin9_package/luci-app-homeassistant package/luci-app-homeassistant
+# cp -rf kiddin9_package/luci-app-homeassistant package/luci-app-homeassistant
 cp -rf kiddin9_package/luci-app-tailscale-community package/luci-app-tailscale-community
 #cp -rf kiddin9_package/luci-app-ssr-plus package/luci-app-ssr-plus
 #cp -rf kiddin9_package/luci-app-guest-wifi package/luci-app-guest-wifi :error
@@ -63,7 +63,7 @@ rm -rf kiddin9_package
 git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
 
 #lucky
-git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 #pushbot
 git clone https://github.com/modelsun/luci-app-pushbot.git package/luci-app-pushbot
