@@ -77,11 +77,13 @@ git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
 sed -i 's/Network Shares/Ksmbd共享/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-transmission/root/usr/share/luci/menu.d/luci-app-transmission.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-qbittorrent/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 
 sed -i 's/services/vpn/g' package/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
+
 
 
 # 添加组播防火墙规则
