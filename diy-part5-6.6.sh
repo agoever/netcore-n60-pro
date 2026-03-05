@@ -23,42 +23,42 @@ sed -i 's/192.168.6.1/192.168.6.6/g' package/base-files/files/bin/config_generat
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 
-
 # ddnsto 3.0.2
 git clone https://github.com/linkease/nas-packages-luci package/nas-packages-luci
 git clone https://github.com/linkease/nas-packages package/nas-packages
 git clone https://github.com/souwei168/luci-app-store.git package/luci-app-store
 
-#onliner
 git clone https://github.com/kiddin9/kwrt-packages kiddin9_package
-cp -rf kiddin9_package/luci-app-onliner package/luci-app-onliner
-# cp -rf kiddin9_package/luci-app-store package/luci-app-store
-cp -rf kiddin9_package/luci-app-wizard package/luci-app-wizard
-cp -rf kiddin9_package/luci-lib-taskd package/luci-lib-taskd
-cp -rf kiddin9_package/taskd package/taskd
-cp -rf kiddin9_package/luci-lib-xterm package/luci-lib-xterm
 
-cp -rf kiddin9_package/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
-cp -rf kiddin9_package/aliyundrive-webdav package/aliyundrive-webdav
-
-# cp -rf kiddin9_package/luci-app-easymesh package/luci-app-easymesh
-# cp -rf kiddin9_package/luci-app-fileassistant package/luci-app-fileassistant
-cp -rf kiddin9_package/luci-app-timecontrol package/luci-app-timecontrol
-# cp -rf kiddin9_package/luci-app-homeassistant package/luci-app-homeassistant
-cp -rf kiddin9_package/luci-app-tailscale-community package/luci-app-tailscale-community
-#cp -rf kiddin9_package/luci-app-ssr-plus package/luci-app-ssr-plus
-#cp -rf kiddin9_package/luci-app-guest-wifi package/luci-app-guest-wifi :error
 cp -rf kiddin9_package/luci-app-wrtbwmon package/luci-app-wrtbwmon
-
-cp -rf kiddin9_package/luci-app-easytier package/luci-app-easytier
 
 rm -rf kiddin9_package
 
 
-# git clone https://github.com/kenzok8/small-package.git kenzok8_package
-# cp -rf kenzok8_package/luci-app-quickstart package/luci-app-quickstart
-# cp -rf kenzok8_package/quickstart package/quickstart
-# rm -rf kenzok8_package
+
+git clone https://github.com/kenzok8/openwrt-packages kenzok8_package
+
+# cp -rf kenzok8_package/luci-app-store package/luci-app-store
+cp -rf kenzok8_package/luci-lib-taskd package/luci-lib-taskd
+cp -rf kenzok8_package/taskd package/taskd
+cp -rf kenzok8_package/luci-lib-xterm package/luci-lib-xterm
+
+cp -rf kenzok8_package/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
+cp -rf kenzok8_package/aliyundrive-webdav package/aliyundrive-webdav
+
+# cp -rf kenzok8_package/luci-app-easymesh package/luci-app-easymesh
+# cp -rf kenzok8_package/luci-app-fileassistant package/luci-app-fileassistant
+
+# cp -rf kenzok8_package/luci-app-homeassistant package/luci-app-homeassistant
+
+# cp -rf kenzok8_package/luci-app-ssr-plus package/luci-app-ssr-plus
+# cp -rf kenzok8_package/luci-app-guest-wifi package/luci-app-guest-wifi :error
+
+rm -rf kenzok8_package
+
+git clone https://github.com/xuanranran/luci-app-onliner package/luci-app-onliner
+git clone https://github.com/sirpdboy/luci-app-timecontrol package/luci-app-timecontrol
+# git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
 git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
 
