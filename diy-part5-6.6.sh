@@ -56,7 +56,8 @@ cp -rf kenzok8_package/aliyundrive-webdav package/aliyundrive-webdav
 
 rm -rf kenzok8_package
 
-git clone https://github.com/xuanranran/luci-app-onliner package/luci-app-onliner
+git clone https://github.com/danchexiaoyang/luci-app-onliner.git package/luci-app-onliner
+
 git clone https://github.com/sirpdboy/luci-app-timecontrol package/luci-app-timecontrol
 # git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
@@ -84,6 +85,9 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-qbittorrent/root/usr/
 sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
+
+sed -i 's/services/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
+sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
