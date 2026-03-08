@@ -89,6 +89,13 @@ sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscal
 sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 
+#目录是增加 “概览”
+git clone https://github.com/agoever/netcore-n60-pro.git package/cfgfiles
+DEST="$TARGET_DIR/usr/lib/lua/luci/controller/"
+mkdir -p $DEST
+cp package/cfgfiles/cfgfiles/index.lua $DEST
+rm -rf package/cfgfiles
+
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
 config rule
