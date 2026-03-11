@@ -90,7 +90,7 @@ sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontr
 sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 
 #目的是增加 “概览”
-git clone https://github.com/agoever/luci-app-custom.git package/luci-app-custom
+#git clone https://github.com/agoever/luci-app-custom.git package/luci-app-custom
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
