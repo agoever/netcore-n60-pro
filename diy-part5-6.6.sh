@@ -88,8 +88,8 @@ sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/sh
 sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
 
-sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
-sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
+#sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
+#sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 
 #目的是增加 “概览”
 #git clone https://github.com/agoever/luci-app-custom.git package/luci-app-custom
