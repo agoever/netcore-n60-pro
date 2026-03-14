@@ -10,6 +10,8 @@
 # See /LICENSE for more information.
 #
 
+# 删除旧版本包，使用后面仓库中的
+rm -rf feeds/packages/net/tailscale
 
 # sed -i 's/qihoo,360t7/netcore,n60-pro/g' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 
