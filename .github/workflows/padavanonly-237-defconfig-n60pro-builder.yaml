@@ -95,7 +95,7 @@ jobs:
         go-version: '1.26.1'
 
     - name: Link upx for tailscale
-      run:
+      run: |
         cd openwrt
         mkdir -p upx
         ln -sf /usr/bin/upx upx/upx
