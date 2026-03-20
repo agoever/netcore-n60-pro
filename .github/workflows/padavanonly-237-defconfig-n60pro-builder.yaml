@@ -101,11 +101,6 @@ jobs:
         mkdir -p /workdir/openwrt/upx
         ln -sf /usr/bin/upx /workdir/openwrt/upx/upx
 
-        # 注释掉创建 /builder 目录的行
-        sed -i '/mkdir -p \/builder/s/^/#/' /workdir/openwrt/package/tailscale/package/tailscale/Makefile
-        # 注释掉复制文件到 /builder 的行
-        sed -i '/\$(CP).*\/builder/s/^/#/' /workdir/openwrt/package/tailscale/package/tailscale/Makefile
-     
     - name: Compile the firmware
       id: compile
       run: |
