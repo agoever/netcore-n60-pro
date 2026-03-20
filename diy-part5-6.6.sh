@@ -76,7 +76,7 @@ git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
 git clone https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/luci-app-tailscale-community
-git clone https://github.com/GuNanOvO/openwrt-tailscale package/tailscale
+git clone https://github.com/modelsun/openwrt-tailscale.git package/tailscale
 
 #修改显示位置
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
