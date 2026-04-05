@@ -60,7 +60,7 @@ rm -rf kenzok8_package
 
 git clone https://github.com/agoever/luci-app-onliner.git package/luci-app-onliner
 
-git clone https://github.com/sirpdboy/luci-app-timecontrol package/luci-app-timecontrol
+git clone -b good https://github.com/modelsun/luci-app-timecontrol.git package/luci-app-timecontrol
 # git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
 git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-app-filetransfer
