@@ -71,6 +71,11 @@ git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 #pushbot
 git clone https://github.com/modelsun/luci-app-pushbot.git package/luci-app-pushbot
 
+git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
+
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+sed -i 's/ +v2ray-geoip +v2ray-geosite +v2dat//g' package/mosdns/luci-app-mosdns/Makefile
+
 #luci-app-bandix
 git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
