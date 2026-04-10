@@ -69,7 +69,8 @@ git clone https://github.com/DustReliant/luci-app-filetransfer.git package/luci-
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 #pushbot
-git clone https://github.com/modelsun/luci-app-pushbot.git package/luci-app-pushbot
+#git clone https://github.com/modelsun/luci-app-pushbot.git package/luci-app-pushbot
+git clone https://github.com/beyondwen/luci-app-pushbot.git package/luci-app-pushbot
 
 git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 
