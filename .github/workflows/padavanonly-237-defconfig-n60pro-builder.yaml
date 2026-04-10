@@ -94,6 +94,17 @@ jobs:
       with:
         go-version: '1.26.1'
         cache: false
+
+    - name: Ensure correct Go version
+      run: |
+        echo "Before fix:"
+        which go || echo "go not found"
+        go version || echo "no go"
+        export PATH="/opt/hostedtoolcache/go/1.26.1/x64/bin:$PATH"
+        echo "After fix:"
+        which go
+        go version
+        echo "PATH=$PATH" >> $GITHUB_ENV
       
     - name: Install UPX and create symlink
       run: |
