@@ -113,7 +113,8 @@ jobs:
         mkdir -p /workdir/openwrt/upx
         ln -sf /usr/bin/upx /workdir/openwrt/upx/upx
 
-    - name: Compile the firmware
+    - name: Compile the firmwar
+      if: false   # 临时禁用
       id: compile
       run: |
         cd openwrt
