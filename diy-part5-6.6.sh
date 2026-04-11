@@ -23,6 +23,7 @@ sed -i 's/192.168.6.1/192.168.6.6/g' package/base-files/files/bin/config_generat
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+sed -i "s/hostname='ImmortalWrt'/hostname='LeiKe'/g" package/base-files/files/bin/config_generate
 
 
 # ddnsto 3.0.2
