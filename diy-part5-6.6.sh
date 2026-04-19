@@ -75,8 +75,9 @@ git clone https://github.com/beyondwen/luci-app-pushbot.git package/luci-app-pus
 
 git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-sed -i 's/ +v2ray-geoip +v2ray-geosite +v2dat//g' package/mosdns/luci-app-mosdns/Makefile
+# 增加mosdns会导致tailscale编译失败
+# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+# sed -i 's/ +v2ray-geoip +v2ray-geosite +v2dat//g' package/mosdns/luci-app-mosdns/Makefile
 
 #luci-app-bandix
 git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
@@ -97,9 +98,6 @@ sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscal
 
 #sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 #sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
-
-#目的是增加 “概览”
-#git clone https://github.com/agoever/luci-app-custom.git package/luci-app-custom
 
 # 添加组播防火墙规则
 cat >> package/network/config/firewall/files/firewall.config <<EOF
