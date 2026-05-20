@@ -105,6 +105,24 @@ jobs:
         which go
         go version
         echo "PATH=$PATH" >> $GITHUB_ENV
+
+
+    - name: Update OpenWrt golang feed
+      run: |
+        cd /workdir/openwrt
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+        
+        # 强制更新 golang 包到最新版本
+        rm -rf feeds/packages/lang/golang
+        ./scripts/feeds update -f packages
+        ./scripts/feeds install golang
+    
+    - name: Force OpenWrt to use host Go (optional but recommended)
+      run: |
+        cd /workdir/openwrt
+        echo 'CONFIG_GOLANG_EXTERNAL_BOOTSTRAP=y' >> .config
+        echo 'CONFIG_GOLANG_BUILDING_HOST=y' >> .config
       
     - name: Install UPX and create symlink
       run: |
