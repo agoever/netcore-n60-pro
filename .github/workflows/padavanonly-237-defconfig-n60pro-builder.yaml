@@ -106,6 +106,24 @@ jobs:
         go version
         echo "PATH=$PATH" >> $GITHUB_ENV
 
+
+    - name: Remove 'tool' directive from tailscale go.mod
+      run: |
+        cd openwrt
+        
+        # 确保 feeds 已更新
+        ./scripts/feeds update tailscale
+        ./scripts/feeds install tailscale
+        
+        # 在 feeds 源码中删除 tool 行
+        find feeds -name "go.mod" -path "*/tailscale/*" -exec sed -i '/^tool /d' {} \;
+        
+        # 清理旧构建缓存
+        rm -rf build_dir/target-*/tailscale-*
+        rm -rf tmp/go-build
+        rm -rf dl/go-mod-cache
+        
+        echo "✅ tailscale go.mod 已修复，tool 指令已删除"
       
     - name: Install UPX and create symlink
       run: |
@@ -115,7 +133,7 @@ jobs:
         ln -sf /usr/bin/upx /workdir/openwrt/upx/upx
 
     - name: Compile the firmware
-      # if: false   # 临时禁用
+      # if: true   # 临时禁用
       id: compile
       run: |
         cd openwrt
