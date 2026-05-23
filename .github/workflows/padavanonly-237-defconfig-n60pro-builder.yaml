@@ -133,7 +133,7 @@ jobs:
         ln -sf /usr/bin/upx /workdir/openwrt/upx/upx
 
     - name: Compile the firmware
-      # if: true   # 临时禁用
+      # if: false   # 临时禁用，去掉注释即可
       id: compile
       run: |
         cd openwrt
