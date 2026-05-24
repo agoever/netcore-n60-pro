@@ -11,7 +11,7 @@
 #
 
 # 删除旧版本包，使用后面仓库中的
-rm -rf feeds/packages/net/tailscale
+# rm -rf feeds/packages/net/tailscale
 
 # sed -i 's/qihoo,360t7/netcore,n60-pro/g' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 
@@ -84,7 +84,7 @@ git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
 git clone https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/luci-app-tailscale-community
-git clone -b 1965 https://github.com/modelsun/openwrt-tailscale.git package/tailscale
+# git clone -b 1965 https://github.com/modelsun/openwrt-tailscale.git package/tailscale
 
 #修改显示位置
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
