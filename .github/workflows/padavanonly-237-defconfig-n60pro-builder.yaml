@@ -88,50 +88,6 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    # due to tailscale compile error
-    - name: Set up Go
-      uses: actions/setup-go@v6
-      with:
-        go-version: '1.26.1'
-        cache: false
-
-    - name: Ensure correct Go version
-      run: |
-        echo "Before fix:"
-        which go || echo "go not found"
-        go version || echo "no go"
-        export PATH="/opt/hostedtoolcache/go/1.26.1/x64/bin:$PATH"
-        echo "After fix:"
-        which go
-        go version
-        echo "PATH=$PATH" >> $GITHUB_ENV
-
-
-    - name: Remove 'tool' directive from tailscale go.mod
-      run: |
-        cd openwrt
-        
-        # 确保 feeds 已更新
-        ./scripts/feeds update tailscale
-        ./scripts/feeds install tailscale
-        
-        # 在 feeds 源码中删除 tool 行
-        find feeds -name "go.mod" -path "*/tailscale/*" -exec sed -i '/^tool /d' {} \;
-        
-        # 清理旧构建缓存
-        rm -rf build_dir/target-*/tailscale-*
-        rm -rf tmp/go-build
-        rm -rf dl/go-mod-cache
-        
-        echo "✅ tailscale go.mod 已修复，tool 指令已删除"
-      
-    - name: Install UPX and create symlink
-      run: |
-        sudo apt update
-        sudo apt install upx -y
-        mkdir -p /workdir/openwrt/upx
-        ln -sf /usr/bin/upx /workdir/openwrt/upx/upx
-
     - name: Compile the firmware
       # if: false   # 临时禁用，去掉注释即可
       id: compile
