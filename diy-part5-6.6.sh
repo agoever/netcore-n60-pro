@@ -13,6 +13,14 @@
 # 删除旧版本包，使用后面仓库中的
 # rm -rf feeds/packages/net/tailscale
 
+rm -rf feeds/luci/applications/luci-app-homeproxy
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-v2raya
+rm -rf feeds/packages/net/v2ray-core
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/xray-plugin
+rm -rf feeds/helloworld
+
 # sed -i 's/qihoo,360t7/netcore,n60-pro/g' target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 
 # Modify default IP
