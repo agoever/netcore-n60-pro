@@ -88,6 +88,35 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+    - name: Debug Xray dependency
+      run: |
+        cd openwrt
+        
+        echo "=== 1. 当前 xray 配置状态 ==="
+        grep "CONFIG_PACKAGE_xray" .config || echo "未找到 xray 相关配置"
+        
+        echo ""
+        echo "=== 2. 搜索依赖 xray 的软件包 ==="
+        grep -r "xray" package/ feeds/ --include="Makefile" 2>/dev/null | grep -i "depends" || echo "未找到依赖"
+        
+        echo ""
+        echo "=== 3. 执行 defconfig 后的变化 ==="
+        make defconfig > /dev/null 2>&1
+        grep "CONFIG_PACKAGE_xray" .config || echo "defconfig 后仍未找到 xray 配置"
+        
+        echo ""
+        echo "=== 4. 检查 xray-core 是否被选中 ==="
+        if grep -q "CONFIG_PACKAGE_xray-core=y" .config; then
+          echo "⚠️ xray-core 被设置为编译进固件"
+          echo "查看是哪个包引入的："
+          make defconfig
+          . scripts/diffconfig.sh | grep xray
+        elif grep -q "CONFIG_PACKAGE_xray-core=m" .config; then
+          echo "⚠️ xray-core 被设置为编译但不内置"
+        else
+          echo "✅ xray-core 未被选中"
+        fi
+
     - name: Compile the firmware
       # if: false   # 临时禁用，去掉注释即可
       id: compile
