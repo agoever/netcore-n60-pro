@@ -17,6 +17,7 @@ rm -rf feeds/luci/applications/luci-app-homeproxy
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-v2raya
 rm -rf feeds/packages/net/v2ray-core
+rm -rf feeds/packages/net/v2raya
 rm -rf feeds/packages/net/xray-core
 rm -rf feeds/packages/net/xray-plugin
 rm -rf feeds/helloworld
