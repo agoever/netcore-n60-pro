@@ -70,8 +70,8 @@ cp -rf kenzok8_package/aliyundrive-webdav package/aliyundrive-webdav
 rm -rf kenzok8_package
 
 git clone https://github.com/agoever/luci-app-onliner.git package/luci-app-onliner
-
-git clone https://github.com/mayipashu/luci-app-timecontrol package/luci-app-timecontrol
+git clone https://github.com/selfcan/luci-app-timecontrol-3 package/luci-app-timecontrol
+# git clone https://github.com/mayipashu/luci-app-timecontrol package/luci-app-timecontrol
 # git clone -b good https://github.com/modelsun/luci-app-timecontrol.git package/luci-app-timecontrol
 # git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
