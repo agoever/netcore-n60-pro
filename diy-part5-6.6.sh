@@ -11,7 +11,7 @@
 #
 
 # 删除旧版本包，使用后面仓库中的
-rm -rf feeds/packages/net/tailscale
+# rm -rf feeds/packages/net/tailscale
 rm -rf feeds/luci/applications/luci-app-tailscale-community
 
 rm -rf feeds/luci/applications/luci-app-homeproxy
@@ -94,7 +94,7 @@ git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 
 git clone https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/luci-app-tailscale-community
-git clone https://github.com/modelsun/openwrt-tailscale.git package/tailscale
+# git clone https://github.com/modelsun/openwrt-tailscale.git package/tailscale
 
 #修改显示位置
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-ksmbd/root/usr/share/luci/menu.d/luci-app-ksmbd.json
@@ -104,7 +104,8 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-qbittorrent/root/usr/
 
 sed -i 's/services/network/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
 sed -i 's/"title": "banIP"/"title": "BanIP"/g' feeds/luci/applications/luci-app-banip/root/usr/share/luci/menu.d/luci-app-banip.json
-sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
+# 官方已修改在VPN下
+# sed -i 's/services/vpn/g' package/luci-app-tailscale-community/luci-app-tailscale-community/root/usr/share/luci/menu.d/luci-app-tailscale-community.json
 
 #sed -i 's/\/control/\/network/g' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
 #sed -i '4c\    "order": 70,' package/luci-app-timecontrol/luci-app-timecontrol/root/usr/share/luci/menu.d/luci-app-timecontrol.json
